@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+app-login-form {
+    width: 100%;
+}
+
+.section__img__carro {
+    display: flex;
+    align-self: center;
+    width: 100vw;
+}
+
+.img__carro {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
