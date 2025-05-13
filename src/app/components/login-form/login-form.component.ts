@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { LoginService } from './../../services/login.service';
+import { Component, inject } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login-form',
@@ -7,11 +8,35 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.css'
 })
+
 export class LoginFormComponent {
+  LoginService = inject(LoginService)
 
   loginForm = new FormGroup({
-    nome: new FormControl(""),
-    senha: new FormControl(""),
+    nome: new FormControl("", [Validators.required]),
+    senha: new FormControl("", [Validators.required]),
   })
+
+  onSubmitLogin() {
+    const { nome, senha } = this.loginForm.value
+
+    if (!this.loginForm.valid || !nome || !senha) {
+      alert ("Existem campos não preenchidos!")
+      return
+    }
+
+    this.LoginService.login(nome, senha).subscribe({
+      error: (err) => {
+
+        if(err.status === 401){
+          alert("O usuário ou senha estão incorretos!")
+          return
+        } 
+
+          alert("Erro ao conectar com o servidor, tente novamente mais tarde")
+  
+      }
+    })
+  }
 
 }
