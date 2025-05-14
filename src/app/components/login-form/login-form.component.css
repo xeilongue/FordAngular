@@ -3,7 +3,8 @@ form {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    gap: 20px
+    gap: 20px;
+    padding: 10vh;
 }
 
 .login__inputs {
@@ -14,12 +15,46 @@ form {
     gap: 10px;
 }
 
-form input[type="text"] {
-    padding: 1.1vh;
-    width: 80%;
+.login__inputs__input {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
 }
 
-.login__checkbox {
+form input[type="text"] {
+    padding: 1.1vh 4vh;
+    width: 35vw;
+    border-radius: 10px;
+}
+
+.img__input {
+    position: absolute;
+    margin-left: 1vh;
+    width: 2vh;
+}
+
+.img__info {
+    width: 1.2vw;
+}
+
+.login__check {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+    align-self: flex-end;
+    font-size: 2vh;
+}
+
+.form-check-input {
+    height: 2vh;
+    width: 2vw;
+}
+
+.button__login {
+    padding: 1vh;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgb(44, 44, 255);
+    color: white;
+    font-size: 1vw;
 }

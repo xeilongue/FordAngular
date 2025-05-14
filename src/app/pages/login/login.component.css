@@ -11,6 +11,8 @@
     width: 100%;
     height: 100vh;
     background-color: rgb(253, 249, 249);
+    padding: 4vh;
+    gap: 3vh;
 }
 
 .div__img__logo {
@@ -24,7 +26,9 @@
 }
 
 .login__title {
-
+    font-size: 2vw;
+    font-weight: 400;
+    color: rgb(44, 44, 255)
 }
 
 app-login-form {

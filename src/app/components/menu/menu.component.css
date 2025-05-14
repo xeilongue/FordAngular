@@ -1,0 +1,13 @@
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__button {
+    background-image: url("/menu.png");
+    width: 2vw;
+    height: 2vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
