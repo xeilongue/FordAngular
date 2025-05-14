@@ -1,1 +1,29 @@
-<p>dashboard works!</p>
+<section class="d-flex gap-3 justify-content-around">
+    <div class="shadow border border-black p-3">
+        <h2>Veículos</h2>
+        <select (change)="onChangeSelect($event)">
+            @for (v of veiculos; track v.id) {
+                <option value="{{ v.id }}">{{ v.vehicle }}</option>
+            }
+        </select>
+    </div>
+
+    <app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal"/>
+    <app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected"/>
+    <app-card [titulo]="'Upd. Software'" [valor]="veiculoSelecionado.softwareUpdates"/>
+</section>
+
+<section>
+    <img src="{{ veiculoSelecionado.img }}" alt="">
+</section>
+
+<section>
+    <app-car-table 
+    [vin]="veiculoSelecionado.vin"
+    [odometro]="vinInfos.odometro"
+    [nivelCombustivel]="vinInfos.nivelCombustivel"
+    [status]="vinInfos.status"
+    [lat]="vinInfos.lat"
+    [long]="vinInfos.long"
+    />
+</section>
