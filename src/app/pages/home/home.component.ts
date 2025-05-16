@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MenuComponent } from '../../components/menu/menu.component';
 import { BoasVindasComponent } from '../../components/boas-vindas/boas-vindas.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +10,12 @@ import { BoasVindasComponent } from '../../components/boas-vindas/boas-vindas.co
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  router = inject(Router)
+
+  logout() {
+    sessionStorage.clear()
+    this.router.navigate([""])
+  }
 
 }

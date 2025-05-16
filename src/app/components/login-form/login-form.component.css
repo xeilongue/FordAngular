@@ -43,6 +43,7 @@ form input[type="text"] {
     gap: 2vw;
     align-self: flex-end;
     font-size: 2vh;
+    margin-right: 5px;
 }
 
 .form-check-input {

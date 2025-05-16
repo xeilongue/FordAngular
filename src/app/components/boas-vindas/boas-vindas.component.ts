@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class BoasVindasComponent {
 
+  closePopUp(){
+    const popUp = document.getElementById("popUp")
+
+    if (popUp) {
+      popUp.style.visibility = "hidden"
+    }
+
+  }
 }

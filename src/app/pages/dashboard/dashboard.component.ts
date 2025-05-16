@@ -3,6 +3,7 @@ import { CardComponent } from '../../components/card/card.component';
 import { CarTableComponent } from '../../components/car-table/car-table.component';
 import { DashboardService } from '../../services/dashboard.service';
 import { Veiculo, VinInfos } from '../../models/car';
+import { Router } from '@angular/router';
 import { connect } from 'rxjs';
 import { MenuComponent } from '../../components/menu/menu.component';
 
@@ -14,6 +15,13 @@ import { MenuComponent } from '../../components/menu/menu.component';
 })
 export class DashboardComponent implements OnInit {
   dashboardService = inject(DashboardService)
+
+  router = inject(Router)
+
+  logout() {
+    sessionStorage.clear()
+    this.router.navigate([""])
+  }
 
   veiculos: Veiculo[] = []
 
