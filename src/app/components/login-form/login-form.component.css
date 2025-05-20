@@ -1,61 +1,177 @@
-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 20px;
-    padding: 10vh;
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Formulário principal */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    justify-self: center;
+}
+
+/* Título */
+.login__title {
+    text-align: center;
+    color: #00274d;
+    font-size: 20px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Container dos inputs */
 .login__inputs {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
+}
+
+/* Wrapper com ícone dentro do input */
+.input-icon-wrapper {
+    position: relative;
     width: 100%;
-    gap: 10px;
-}
-
-.login__inputs__input {
     display: flex;
     align-items: center;
-    gap: 0.5vw;
 }
 
-form input[type="text"] {
-    padding: 1.1vh 4vh;
-    width: 35vw;
-    border-radius: 10px;
+.input-icon-wrapper input {
+    width: 100%;
+    padding-left: 35px; /* espaço para o ícone */
+    padding-right: 10px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.img__input {
+.input-icon {
     position: absolute;
-    margin-left: 1vh;
-    width: 2vh;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+    opacity: 0.6;
 }
 
-.img__info {
-    width: 1.2vw;
+/* Link "Esqueceu a senha?" */
+.forgot-password-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
 }
 
-.login__check {
+.forgot-password {
+    font-size: 12px;
+    color: #00274d;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Checkbox "Mantenha-me conectado" */
+.login__remember {
     display: flex;
     align-items: center;
-    gap: 2vw;
-    align-self: flex-end;
-    font-size: 2vh;
-    margin-right: 5px;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #333;
 }
 
-.form-check-input {
-    height: 2vh;
-    width: 2vw;
+.login__remember input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #00274d; /* azul Ford */
+    cursor: pointer;
 }
 
+.login__remember label {
+    cursor: pointer;
+}
+
+/* Checkbox "Termos de Uso" */
+.login__terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #333;
+}
+
+.login__terms input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #00274d;
+    cursor: pointer;
+}
+
+.login__terms label {
+    cursor: pointer;
+}
+
+.login__terms a {
+    color: #00274d;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login__terms a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de login */
 .button__login {
-    padding: 1vh;
-    width: 80%;
-    border-radius: 10px;
-    background-color: rgb(44, 44, 255);
+    background-color: #00274d;
     color: white;
-    font-size: 1vw;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.button__login:hover {
+    background-color: #001d3a;
+}
+
+/* Linha divisória */
+.divider {
+    margin: 30px 0 10px;
+    border: none;
+    height: 1px;
+    background-color: #e6e6e6;
+}
+
+/* Texto "Não tem uma conta?" */
+.no-account {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Botão de criar conta */
+.button__create {
+    border: 1px solid #00274d;
+    color: #00274d;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin: 10px auto 0;
+    display: block;
+    cursor: pointer;
+}
+
+.button__create:hover {
+    background-color: #f5f5f5;
 }

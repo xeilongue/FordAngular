@@ -2,33 +2,28 @@
     display: flex;
     width: 100vw;
     height: 100vh;
+    background-image: url("/ford-mustang.webp");
+
 }
 
 .login__form {
     display: flex;
     flex-direction: column;
+    margin: 20vh 0vw;
     align-items: center;
+    justify-self: center;
     width: 100%;
-    height: 100vh;
-    background-color: rgb(253, 249, 249);
-    padding: 4vh;
-    gap: 3vh;
+    padding: 3vh;
 }
 
 .div__img__logo {
     display: flex;
-    justify-content: center;
-    height: 30%;
+    margin-bottom: 10px;
+    height: 15%;
 }
 
 .img__logo {
-    height: 40%;
-}
-
-.login__title {
-    font-size: 2vw;
-    font-weight: 400;
-    color: rgb(44, 44, 255)
+    height: 100%;
 }
 
 app-login-form {
