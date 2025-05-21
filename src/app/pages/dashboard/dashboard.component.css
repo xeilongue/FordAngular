@@ -7,31 +7,13 @@
   min-width: 100vw;
 }
 
-.buttons__nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.6vh 0.6vw;
-}
-
-.button__logout {
-  background-image: url("/logout.png");
-  width: 4vh;
-  height: 3.2vh;
-  margin-left: 0.5vh;
-  margin-top: 0.5vh;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-  background-color: #ffff;
-}
-
 .main__dashboard{
   display: flex;
   flex-direction: column;
   height: 100%;
   align-items: center;
   justify-content: space-between;
+  padding: 2vh;
 }
 
 .dashboard__title {
@@ -71,4 +53,65 @@
 
 .car-img {
   height: 100%;
+}
+
+@media (max-width: 978px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    width: 100vw;
+    padding-bottom: 16px;
+    justify-content: flex-start;
+    scrollbar-width: thin;
+    scrollbar-color: #1351d8 #e0e0e0;
+  }
+
+  .card,
+  app-card {
+    min-width: 220px;
+    flex: 0 0 auto;
+  }
+
+  .img__carro {
+    justify-content: flex-start;
+    width: 100vw;
+    overflow-x: auto;
+  }
+
+  .car-img {
+    min-width: 220px;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  /* Make tables horizontally scrollable */
+  app-car-table {
+    display: block;
+    overflow-x: auto;
+    width: 100vw;
+  }
+
+  app-car-table table {
+    min-width: 400px;
+    width: max-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard__title {
+    font-size: 3vh;
+  }
+  .cards {
+    gap: 8px;
+  }
+  .card,
+  app-card {
+    min-width: 180px;
+  }
+  .car-img {
+    min-width: 150px;
+  }
 }

@@ -16,28 +16,6 @@
     padding: 3vh;
 }
 
-.div__img__logo {
-    display: flex;
-    margin-bottom: 10px;
-    height: 15%;
-}
-
-.img__logo {
-    height: 100%;
-}
-
 app-login-form {
-    width: 100%;
-}
-
-.section__img__carro {
-    display: flex;
-    align-self: center;
-    width: 100%;
-}
-
-.img__carro {
-    display: flex;
-    height: 100%;
     width: 100%;
 }

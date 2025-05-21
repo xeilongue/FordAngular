@@ -28,4 +28,22 @@ export const routes: Routes = [
             .then (c => c.DashboardComponent)
         }
     },
+    {
+        path: "lancamento",
+        pathMatch: "full",
+        canActivate: [loginGuard],
+        loadComponent: () => {
+            return import ("./pages/lancamento/lancamento.component")
+            .then (c => c.LancamentoComponent)
+        }
+    },
+    {
+        path: "contato",
+        pathMatch: "full",
+        canActivate: [loginGuard],
+        loadComponent: () => {
+            return import ("./pages/contato/contato.component")
+            .then (c => c.ContatoComponent)
+        }
+    },
 ];

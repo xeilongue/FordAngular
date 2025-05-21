@@ -6,10 +6,12 @@ import { Veiculo, VinInfos } from '../../models/car';
 import { Router } from '@angular/router';
 import { connect } from 'rxjs';
 import { MenuComponent } from '../../components/menu/menu.component';
+import { HeaderComponent } from '../../components/header/header.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CardComponent, CarTableComponent, MenuComponent],
+  imports: [CardComponent, CarTableComponent, MenuComponent, HeaderComponent, FooterComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })

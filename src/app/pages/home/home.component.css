@@ -13,12 +13,6 @@
     justify-content: center;
 }
 
-.buttons__nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.6vh 0.6vw;
-}
-
 .main__img {
     width: 80%;
 }
@@ -27,15 +21,24 @@ app-boas-vindas {
     position: absolute;
 }
 
-.button__logout {
-    background-image: url("/logout.png");
-    width: 4vh;
-    height: 3.2vh;
-    margin-left: 0.5vh;
-    margin-top: 0.5vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    background-color: #ffff;
+/* Add this at the end of your existing CSS */
+
+/* RESPONSIVIDADE */
+@media all and (max-width: 978px) {
+    .img__produto {
+        width: 90vw;
+    }
+
+    .descricao__produto {
+        font-size: 2vh;
+        max-width: 70vw;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .redirecionamento__produto {
+        font-size: 2.5vh;
+        max-width: 70vw;
+        text-align: center;
+    }
 }
