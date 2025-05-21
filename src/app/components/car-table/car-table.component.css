@@ -64,27 +64,40 @@
     background-color: #f9f9f9;
 }
 
-/* Responsividade */
+/* Improved responsiveness while keeping the style */
 @media (max-width: 978px) {
     .table-container {
+        width: 95%;
         overflow-x: auto;
+        margin: 20px auto;
     }
+    
     .car-table {
-        min-width: 400px;
-        font-size: 0.95rem;
+        min-width: 600px; /* Ensures table doesn't shrink too much */
     }
-    .car-table input[type="text"] {
-        width: 70px;
+    
+    .car-table th, .car-table td {
+        padding: 12px;
     }
-
 }
 
 @media (max-width: 600px) {
-    .car-table {
-        min-width: 350px;
-        font-size: 0.85rem;
+    .table-container {
+        width: 100%;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    .car-table input[type="text"] {
-        width: 60px;
+    
+    .car-table th {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .car-table td {
+        padding: 10px;
+    }
+    
+    .car-table input {
+        padding: 6px;
     }
 }

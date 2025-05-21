@@ -1,21 +1,35 @@
 :host {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("/ford-mustang.webp");
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("/ford-mustang.webp");
+  background-size: cover;
+  background-position: center;
 }
 
 .login__form {
-    display: flex;
-    flex-direction: column;
-    margin: 15vh 0vw;
-    align-items: center;
-    justify-self: center;
-    width: 100%;
-    padding: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
 }
 
-app-login-form {
-    width: 100%;
+/* Responsive styles */
+@media (max-width: 768px) {
+  .login__form {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  :host {
+    background-position: 70% center;
+  }
+  
+  .login__form {
+    padding: 15px;
+  }
 }
