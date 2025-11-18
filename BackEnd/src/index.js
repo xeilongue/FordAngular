@@ -8,7 +8,6 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// torna as imagens públicas
 app.use(express.static(path.join(__dirname, "..", "public/img")));
 
 app.post("/login", (req, res) => {
@@ -50,7 +49,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 500,
                 softwareUpdates: 750,
                 vin: "2FRHDUYS2Y63NHD22454",
-                img: "/ranger.png"
+                img: "http://localhost:3001/ranger.png"
             },
             {
                 id: 2,
@@ -59,7 +58,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 600,
                 softwareUpdates: 310,
                 vin: "2RFAASOYS4E4HDU34875",
-                img: "/mustang.png"
+                img: "http://localhost:3001/mustang.png"
             },
             {
                 id: 3,
@@ -68,7 +67,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 270,
                 softwareUpdates: 970,
                 vin: "1GKFK16K0RJ736886",
-                img: "/territory.png"
+                img: "http://localhost:3001/territory.png"
             },
             {
                 id: 4,
@@ -77,7 +76,7 @@ app.get("/vehicles", (req, res) => {
                 connected: 310,
                 softwareUpdates: 290,
                 vin: "JH4DA9350PS016433",
-                img: "/broncoSport.png"
+                img: "http://localhost:3001/broncoSport.png"
             }
         ];
 
@@ -141,6 +140,7 @@ app.post("/vehicleData", (req, res) => {
                 });
         }
 
+
     } catch (error) {
         return res.status(500).json({
             message: "Falha na comunicação com o servidor!"
@@ -148,7 +148,6 @@ app.post("/vehicleData", (req, res) => {
     }
 })
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-    console.log("Servidor rodando na porta " + PORT);
+app.listen(3001, () => {
+    console.log("http://localhost:3001/");
 });
